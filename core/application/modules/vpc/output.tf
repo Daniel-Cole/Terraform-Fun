@@ -1,5 +1,5 @@
 output "network" {
-  value = "${google_compute_network.vpc_network.name}"
+  value = "${google_compute_network.network.name}"
 }
 
 output "dmz_subnet" {

@@ -29,9 +29,13 @@ variable "private_key_path" {
 
 
 #Networks
-variable "vpc_network" {
+variable "environment" {
+  default = "0"
+}
+
+variable "network" {
   description = "The name of the network for the deployment"
-  default     = "vpc-terraformed"
+  default     = "default"
 }
 
 variable "dmz_subnet" {
@@ -49,6 +53,8 @@ variable "db_subnet" {
 variable "factory_subnet" {
   default     = "10.0.0.192/26"
 }
+
+
 
 variable "allowed_ssh_ips" {
   default = ["0.0.0.0/32"]

@@ -29,6 +29,11 @@ variable "private_key_path" {
 
 
 #Networks
+variable "vpc_network" {
+  description = "The name of the network for the deployment"
+  default     = "default"
+}
+
 variable "network" {
   default = "default"
 }
@@ -42,54 +47,7 @@ variable "default_image" {
   default = "ubuntu-os-cloud/ubuntu-1404-trusty-v20170718"
 }
 
-variable "install_script_src_path" {
-  default = "scripts/provision.sh"
-}
-
-variable "install_script_dest_path" {
-  default = "/tmp/provision.sh"
-}
-
-variable "chef_username" {
-  default = "default-user"
-}
-
-variable "chef_password" {
-  default = "password123"
-}
-
-variable "chef_email" {
-  default = "default-user"
-}
-
-variable "chef_organisation" {
-  default = "myorganisation"
-}
-
-variable "chef_org_shortname" {
-  default = "myorg"
-}
-
-variable "chef_key_src" {
-  default = "keys/chef.key"
-}
-
-variable "chef_key_dst" {
-  default = "~/.ssh/chef.key"
-}
-
-variable "chef_crt_src" {
-  default = "keys/chef.pub"
-}
-
-variable "chef_crt_dst" {
-  default = "/tmp/chef.pub"
-}
-
-variable "chef_first_name" {
-  default = "daniel"
-}
-
-variable "chef_last_name" {
-  default = "cole"
+variable "chef_host" {
+  description = "The host for the node to connect to"
+  default     = "0.0.0.0/32"
 }

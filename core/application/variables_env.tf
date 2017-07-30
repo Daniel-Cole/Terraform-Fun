@@ -1,3 +1,11 @@
+variable "environment" {
+  default = "0"
+}
+
+variable "network" {
+  default = "default"
+}
+
 variable "dmz_subnet" {
   default = "10.0.0.0/26"
 }
